@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> // Запитуємо користувача ввести перше число
+        var num1 = prompt("Введіть перше число:");
+        
+        // Запитуємо користувача ввести друге число
+        var num2 = prompt("Введіть друге число:");
+        
+        // Перетворюємо введені дані в числа
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        
+        // Перевіряємо, чи коректно введено числа
+        if (isNaN(num1) || isNaN(num2)) {
+         
+            alert("Будь ласка, введіть коректні числа.");
+        } else {
+            // Виводимо результати арифметичних операцій
+            var sum = num1 + num2;
+            var difference = num1 - num2;
+            var product = num1 * num2;
+            var quotient = num1 / num2;
+        
+            // Формуємо рядок для виведення
+            var resultString =
+                num1 + " + " + num2 + " = " + sum + "\n" +
+                num1 + " - " + num2 + " = " + difference + "\n" +
+                num1 + " * " + num2 + " = " + product + "\n" +
+                num1 + " / " + num2 + " = " + quotient;
+        
+            // Виводимо результати через alert
+            alert(resultString);
+        }
+        </script>
+</head>
+<body>
+</body>
+</html>
