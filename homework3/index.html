@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Script</title>
+</head>
+
+<body>
+    <script>
+        // Запитуэмо  у користувача рік народження
+        let birthYear = prompt("Введіть свій рік народження:");
+
+        // Перевірка на введення року народження
+        if (birthYear === null) {
+            alert("Шкода, що ви не захотіли ввести свій рік народження.");
+        } else {
+            // Запитати в нього, в якому місті він живе
+            let city = prompt("Введіть місто, в якому ви живете:");
+
+            // Перевірка на введення міста
+            if (city === null) {
+                alert("Шкода, що ви не захотіли ввести своє місто.");
+            } else {
+                // Запитати його улюблений вид спорту
+                let favoriteSport = prompt("Введіть свій улюблений вид спорту:");
+
+                // Перевірка на введення виду спорту
+                if (favoriteSport === null) {
+                    alert("Шкода, що ви не захотіли ввести свій улюблений вид спорту.");
+                } else {
+                    // Визначення віку
+                    let currentYear = new Date().getFullYear();
+                    let age = currentYear - birthYear;
+
+                    // Перевірка на міста-столиці
+                    let capitalMessage = "";
+                    if (city === "Київ" || city === "Вашингтон" || city === "Лондон") {
+                        switch (city) {
+                            case "Київ":
+                                capitalMessage = "Ти живеш у столиці України.";
+                                break;
+                            case "Вашингтон":
+                                capitalMessage = "Ти живеш у столиці США.";
+                                break;
+                            case "Лондон":
+                                capitalMessage = "Ти живеш у столиці Великої Британії.";
+                                break;
+                        }
+                    } else {
+                        capitalMessage = "Ти живеш у місті " + city + ".";
+                    }
+
+                    // Визначення чемпіонів за введеними видами спорту
+                    let championMessage = "";
+                    switch (favoriteSport.toLowerCase()) {
+                        case "футбол":
+                            championMessage = "Круто! Хочеш стати Ліонелем Мессі?";
+                            break;
+                        case "теніс":
+                            championMessage = "Круто! Хочеш стати Сереною Вільямс?";
+                            break;
+                        case "баскетбол":
+                            championMessage = "Круто! Хочеш стати Леброном Джеймсом?";
+                            break;
+                        default:
+                            championMessage = "Круто! Хочеш стати чемпіоном у своєму улюбленому виді спорту?";
+                            break;
+                    }
+
+                    // Відображення інформації
+                    alert("Твій вік: " + age + " років\n" + capitalMessage + "\nТвій улюблений вид спорту: " + favoriteSport + "\n" + championMessage);
+                }
+            }
+        }
+    </script>
+</html>
