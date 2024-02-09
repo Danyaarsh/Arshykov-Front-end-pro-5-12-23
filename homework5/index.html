@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Цикли в JavaScript</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+<script>
+// Вивести на сторінку в один рядок через кому числа від 10 до 20.
+let output = '';
+for (let i = 10; i <= 20; i++) {
+    output += i + ', ';
+}
+document.write('<p>Числа від 10 до 20: ' + output.slice(0, -2) + '</p>');
+
+// Вивести квадрати чисел від 10 до 20.
+output = '';
+for (let i = 10; i <= 20; i++) {
+    output += i * i + ' ';
+}
+document.write('<p>Квадрати чисел від 10 до 20: ' + output + '</p>');
+
+// Вивести таблицю множення на 7.
+document.write('<p>Таблиця множення на 7:</p>');
+document.write('<table border="1">');
+for (let i = 1; i <= 10; i++) {
+    document.write('<tr>');
+    document.write('<td>' + i + ' * 7</td>');
+    document.write('<td>=</td>');
+    document.write('<td>' + (i * 7) + '</td>');
+    document.write('</tr>');
+}
+document.write('</table>');
+
+// Знайти суму всіх цілих чисел від 1 до 15.
+let sum = 0;
+for (let i = 1; i <= 15; i++) {
+    sum += i;
+}
+document.write('<p>Сума чисел від 1 до 15: ' + sum + '</p>');
+
+// Знайти добуток усіх цілих чисел від 15 до 35.
+let product = 1;
+for (let i = 15; i <= 35; i++) {
+    product *= i;
+}
+document.write('<p>Добуток чисел від 15 до 35: ' + product + '</p>');
+
+// Знайти середнє арифметичне всіх цілих чисел від 1 до 500.
+let average;
+let sum2 = 0;
+for (let i = 1; i <= 500; i++) {
+    sum2 += i;
+}
+average = sum2 / 500;
+document.write('<p>Середнє арифметичне чисел від 1 до 500: ' + average + '</p>');
+
+// Вивести суму лише парних чисел в діапазоні від 30 до 80.
+let sumEven = 0;
+for (let i = 30; i <= 80; i++) {
+    if (i % 2 === 0) {
+        sumEven += i;
+    }
+}
+document.write('<p>Сума парних чисел в діапазоні від 30 до 80: ' + sumEven + '</p>');
+
+// Вивести всі числа в діапазоні від 100 до 200 кратні 3.
+output = '';
+for (let i = 100; i <= 200; i++) {
+    if (i % 3 === 0) {
+        output += i + ' ';
+    }
+}
+document.write('<p>Числа від 100 до 200 кратні 3: ' + output + '</p>');
+
+// Дано натуральне число. Знайти та вивести на сторінку всі його дільники.
+const number = 36;
+document.write('<p>Дільники числа ' + number + ':</p>');
+for (let i = 1; i <= number; i++) {
+    if (number % i === 0) {
+        document.write(i + ', ');
+    }
+}
+
+// Визначити кількість його парних дільників.
+let countEvenDivisors = 0;
+for (let i = 1; i <= number; i++) {
+    if (number % i === 0 && i % 2 === 0) {
+        countEvenDivisors++;
+    }
+}
+document.write('<p>Кількість парних дільників числа ' + number + ': ' + countEvenDivisors + '</p>');
+
+// Знайти суму його парних дільників.
+let sumEvenDivisors = 0;
+for (let i = 1; i <= number; i++) {
+    if (number % i === 0 && i % 2 === 0) {
+        sumEvenDivisors += i;
+    }
+}
+document.write('<p>Сума парних дільників числа ' + number + ': ' + sumEvenDivisors + '</p>');
+
+// Надрукувати повну таблицю множення від 1 до 10.
+document.write('<p>Таблиця множення від 1 до 10:</p>');
+document.write('<table border="1">');
+for (let i = 1; i <= 10; i++) {
+    document.write('<tr>');
+    for (let j = 1; j <= 10; j++) {
+        document.write('<td>' + i * j + '</td>');
+    }
+    document.write('</tr>');
+}
+document.write('</table>');
+</script>
+
+</body>
+</html>
