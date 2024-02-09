@@ -1,0 +1,17 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+#floatingDiv {
+    display: none;
+    position: absolute;
+    background-color: #ba1414;
+    padding: 40px;
+    border: 1px solid hsl(115, 30%, 55%);
+}
+
+#myInput {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: blue;
+}
