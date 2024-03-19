@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Запитуємо у користувача, яку дію він хоче виконати
+        let operation = prompt("Виберіть дію (add, sub, mult, div):");
+        
+        // Перевіряємо, чи коректно введена дія
+        if (operation !== 'add' && operation !== 'sub' && operation !== 'mult' && operation !== 'div') {
+            console.log("Неправильно введена дія.");
+        } else {
+            // Запитуємо у користувача перше число
+            let num1 = parseFloat(prompt("Введіть перше число:"));
+            // Запитуємо у користувача друге число
+            let num2 = parseFloat(prompt("Введіть друге число:"));
+        
+            // Виконуємо вибрану дію та виводимо результат разом з операндами
+            let result;
+            let operand;
+            switch (operation) {
+                case 'add':
+                    result = num1 + num2;
+                    operand = '+';
+                    break;
+                case 'sub':
+                    result = num1 - num2;
+                    operand = '-';
+                    break;
+                case 'mult':
+                    result = num1 * num2;
+                    operand = '*';
+                    break;
+                case 'div':
+                    // Перевіряємо, чи друге число не дорівнює 0, щоб уникнути ділення на нуль
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                        operand = '/';
+                    } else {
+                        console.log("Ділення на нуль неможливе.");
+                        result = null;
+                    }
+                    break;
+            }
+        
+            // Виводимо результат разом з операндами
+            if (result !== null) {
+                console.log(`${num1} ${operand} ${num2} = ${result}`);
+            }
+        }
+        </script>
+</body>
+</html>
